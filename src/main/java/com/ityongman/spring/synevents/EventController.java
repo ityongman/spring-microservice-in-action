@@ -2,6 +2,7 @@ package com.ityongman.spring.synevents;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,8 +27,8 @@ public class EventController {
 	
 	@RequestMapping("/generic")
 	@ResponseBody
-	public String getGeneric() {
-		customSpringEventPublisher.doStuffAndPublishAnEvent("business");
+	public String getGeneric(@RequestParam String msg) {
+		customSpringEventPublisher.doGenericEvent(msg);
 		return "generic";
 	}
 }

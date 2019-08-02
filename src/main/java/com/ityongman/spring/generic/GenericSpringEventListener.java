@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class GenericSpringEventListener {
 	
 	@EventListener(condition="#event.success")
-	public void handleSuccessful(GenericSpringEvent<String> event) {
+	public void handleSuccessful(GenericSpringEvent<Object> event) {
 		System.out.println("Received spring generic event - " + event.getData());
 	}
 
