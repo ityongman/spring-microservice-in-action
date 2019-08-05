@@ -12,6 +12,9 @@ import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 
+/**
+ *	可以参照 https://www.concretepage.com/spring-boot/spring-boot-redis-cache 进行后续修改
+ */
 @Configuration
 @EnableCaching
 @ComponentScan("com.ityongman.springrediscache")
