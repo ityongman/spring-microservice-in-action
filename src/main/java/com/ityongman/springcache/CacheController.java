@@ -30,13 +30,13 @@ public class CacheController {
 	@RequestMapping("/save")
 	public String save(@RequestParam String instrument) {
 		musicService.save(instrument);
-		return "SUCCESS";
+		return instrument;
 	}
 	
 	@RequestMapping("delete")
 	public String delete(@RequestParam String instrument) {
 		musicService.delete(instrument);
-		return "SUCCESS";
+		return instrument;
 	}
 	
 	@RequestMapping("deleteAll") 
@@ -48,6 +48,6 @@ public class CacheController {
 	@RequestMapping("play")
 	public String play(@RequestParam String instrument) {
 		musicService.play(instrument);
-		return "SUCCESS";
+		return instrument;
 	}
 }
